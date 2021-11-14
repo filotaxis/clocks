@@ -1,0 +1,163 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Monoton', cursive;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #374441;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+header{
+    color: #f28482;
+    font-size: 2rem;
+}
+
+#clocks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock{
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(125, 125, 125);
+    border-radius: 50%;
+    position: relative;
+    padding: 2rem;
+}
+
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+.hand {
+    background: black;
+    position: absolute;
+    height: 6px;
+    width: 50%;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second{
+    background: #08feb2;
+}
+
+.minute{
+    background: #c6fc00;
+}
+
+.hour{
+    background: #fd1f66;
+}
+
+.apple{
+    stroke-width: 30;
+    stroke-linecap: round;
+    fill: none;
+    transform: rotate(270deg);
+    transform-origin: center;
+ }
+
+.apple-hr{
+    stroke: #fd1f66;
+}
+.apple-min{
+    stroke: #c6fc00;
+}
+.apple-sec{
+    stroke: #08feb2;
+}
+
+.progress{
+    stroke-width: 30;
+    stroke: indianred;
+    stroke-linecap: round;
+    fill: none;
+    transform: rotate(270deg);
+    transform-origin: center;
+}
+
+.digital-watch{
+    width: 19rem;
+    color: #f6bd60;
+    font-weight: 700;
+    font-size: 4rem; 
+    border: 3px solid #f6bd60;
+    background-color: #272c2b;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    padding: 20px;
+    margin: 1rem;
+}
+
+.digital-watch>span{
+    text-align: center;
+    display: inline-block;
+    width: 5rem;
+    margin: 0 0.2rem;
+}
+
+.dig-hr{
+    color: #fd1f66;
+}
+
+.dig-min{
+    color: #c6fc00;
+}
+
+.dig-sec{
+    color: #08feb2;
+}
+
+footer{
+    background-color: #f28482;
+    color: #272c2b;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+footer>p>a{
+    color: #590d22;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer>p>a:hover{
+    color: #fff;
+}
+
+@media  (max-width: 896px) {
+   
+    #clocks{
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+        margin: 1rem;
+    }
+
+    footer{
+        font-size: 1rem;
+    }
+
+    header{
+        margin: 0;
+        padding: 0;
+    }
+}
